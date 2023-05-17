@@ -17,6 +17,7 @@ pipeline {
         withCredentials([usernamePassword(credentialsId: 'personal-docker-credentials', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
           sh "echo ${DOCKER_USERNAME}"
         }
+        she "docker--version"
       }
     }
   }  
